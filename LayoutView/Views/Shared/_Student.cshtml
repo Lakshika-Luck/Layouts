@@ -1,0 +1,26 @@
+﻿@model LayoutView.Models.Student
+
+<div>
+        
+    <table border="1" cellspacing="0">
+        <tr>
+            <td rowspan="5">
+            @{String Imgpath = "~/img/profilepic/" + Model.ProfilePic; }
+            <img src=@Url.Content(Imgpath) alt="Profile picture" width="30%"/>
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model=>model.Regno ):<b>@Html.DisplayFor(model=>model.Regno)</b></td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Name):<b>@Html.DisplayFor(model => model.Name)</b></td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Course):<b>@Html.DisplayFor(model => model.Course)</b></td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.GPA):<b>@Html.DisplayFor(model => model.GPA)</b></td>
+        </tr>
+    </table>
+</div>
+

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<LayoutView.Models.Student>
+
+@{
+    ViewBag.Title = "AllStudents";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<h2>AllStudents</h2>
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_Student",item);
+}
